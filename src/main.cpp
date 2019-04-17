@@ -1,7 +1,7 @@
 #include "mbed.h"
 #include <USBSerial.h>
 
-Serial screen(USBTX,USBRX,9600);
+USBSerial screen;
 PwmOut led[]={(PD_13),(PD_15),(PD_14)};
 char action;
 Timeout timeout;
