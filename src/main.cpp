@@ -12,7 +12,7 @@ int main(){
     screen.printf("Brighter(+) or Dimmer(-)\n");
     action = screen.getc();
     if(action == '+'){
-      if(led[2]>=1.0){
+      if(led[2]<1.0){
       led[2] = led[2]+0.05;
       led[0] = 1;
       timeout.attach(&desligar_leds, 0.1);
@@ -22,7 +22,7 @@ int main(){
       }
     }
     if(action == '-'){
-      if(led[2]<=0.0){
+      if(led[2]>0.0){
       led[2] = led[2]-0.05;
       led[1] = 1;
       timeout.attach(&desligar_leds, 0.1);
